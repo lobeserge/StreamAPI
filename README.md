@@ -187,7 +187,7 @@ public class FruitList {
 }
 ```
 
-###Example6: Handling a Comparator  with lambda expression:
+### Example 6: Handling a Comparator  with lambda expression:
 for this example we refer to the package lobe.lambdacomparator and we see how handling a list of student and sorting with comparator using lambda expression is way easier . in snippet from the code is given below :
   ```
   //sort students by name
