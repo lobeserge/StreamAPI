@@ -194,9 +194,82 @@ for this example we refer to the package lobe.lambdacomparator and we see how ha
    student.sort(Comparator.comparing(e->e.getName()));
    System.out.print(studentsort);
    ```
+### Example 7: Using lambda expression to filter data
+in this example we shall see how to filter a list using lambda expression.
+For this example we refer to the code in the package lobe.lambdafilter
+
+we create a product class :
+
+```
+public class Product {
+    
+    
+     int id;  
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public Product(int id, String name, float price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+     String name;  
+    float price;  
+}
+```
 
 
-
+and we filter the class using lambda expression
+```
+public class LambdaFilterProduct {
+   
+    public static void main(String[] args) {  
+        List<Product> list=new ArrayList<Product>();  
+          
+        //Add products to product list 
+        list.add(new Product(1,"Samsung S6",45000f));  
+        list.add(new Product(3,"MacBook Pro",200000f));  
+        list.add(new Product(2,"HP Laptop",3000f));  
+          
+        System.out.println("sort product list by name");  
+  
+        // implement a lambda expression to print out sorted list  
+        Collections.sort(list,(prod1,prod2)->{  
+        return prod1.name.compareTo(prod2.name);  
+        });  
+        for(Product p:list){  
+            System.out.println(p.id+" "+p.name+" "+p.price);  
+        }  
+  
+    }  
+    
+    
+    
+    
+}
+```
  
 
 
